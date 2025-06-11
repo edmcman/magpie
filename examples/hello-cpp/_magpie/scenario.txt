@@ -1,0 +1,22 @@
+[magpie]
+local_original_copy = True
+
+[software]
+path = examples/hello-cpp
+target_files =
+    hello.cpp.xml
+fitness = output
+
+init_cmd = bash init.sh
+setup_cmd = bash setup.sh
+compile_cmd = bash compile.sh
+test_cmd = 
+run_cmd = python3 metric.py
+
+[search]
+target_fitness = 0
+max_steps = 10
+possible_edits =
+    XmlNodeDeletion<stmt>
+    XmlNodeReplacement<stmt>
+    #XmlNodeInsertion<stmt,stmt>
