@@ -1,5 +1,6 @@
 [magpie]
 local_original_copy = True
+output_encoding = utf8
 
 [software]
 path = examples/hello-cpp
@@ -15,8 +16,9 @@ run_cmd = python3 metric.py
 
 [search]
 target_fitness = 0
-max_steps = 10
+max_steps = 100000
 possible_edits =
     XmlNodeDeletion<stmt>
     XmlNodeReplacement<stmt>
-    #XmlNodeInsertion<stmt,stmt>
+    #XmlNodeInsertion<stmt,block>
+    SrcmlStmtInsertion
