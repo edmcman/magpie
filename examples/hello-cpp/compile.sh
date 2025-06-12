@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-cd build
-make
+g++ -c hello.cpp -o /dev/null
