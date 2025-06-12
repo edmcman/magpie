@@ -14,11 +14,14 @@ compile_cmd = bash compile.sh
 test_cmd = 
 run_cmd = python3 metric.py
 
+[srcml]
+focus = block stmt operator_comp operator_arith number function
+
 [search]
 target_fitness = 0
-max_steps = 100000
+max_time = 600
 possible_edits =
-    XmlNodeDeletion<stmt>
-    XmlNodeReplacement<stmt>
-    #XmlNodeInsertion<stmt,block>
+    XmlNodeDeletion<function>
+    SrcmlStmtDeletion
+    SrcmlStmtReplacement
     SrcmlStmtInsertion
