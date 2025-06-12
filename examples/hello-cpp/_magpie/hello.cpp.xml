@@ -1,18 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<unit xmlns="http://www.srcML.org/srcML/src" xmlns:cpp="http://www.srcML.org/srcML/cpp" revision="1.0.0" language="C++" filename="/tmp/hello.cpp"><cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;iostream&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;string&gt;</cpp:file></cpp:include>
-
-<function><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>getMessage</name><parameter_list>()</parameter_list> <block>{<block_content>
-    <return>return <expr><literal type="string">"Hello, World!"</literal></expr>;</return>
-</block_content>}</block></function>
-
-<function><type><name>void</name></type> <name>printMessage</name><parameter_list>()</parameter_list> <block>{<block_content>
-    <decl_stmt><decl><type><name><name>std</name><operator>::</operator><name>string</name></name></type> <name>message</name> <init>= <expr><call><name>getMessage</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-    <expr_stmt><expr><name><name>std</name><operator>::</operator><name>cout</name></name> <operator>&lt;&lt;</operator> <name>message</name> <operator>&lt;&lt;</operator> <name><name>std</name><operator>::</operator><name>endl</name></name></expr>;</expr_stmt>
-</block_content>}</block></function>
-
-<function><type><name>int</name></type> <name>main</name><parameter_list>()</parameter_list> <block>{<block_content>
-    <expr_stmt><expr><call><name>printMessage</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
-    <return>return <expr><literal type="number">0</literal></expr>;</return>
-</block_content>}</block></function>
-</unit>
+<unit xmlns="http://www.srcML.org/srcML/src" revision="1.0.0" language="C++" filename="/tmp/hello.cpp"><function><type><name>int</name></type> <name>foo</name><parameter_list>(<parameter><decl><type><name>int</name></type> <name>x</name></decl></parameter>)</parameter_list> <block>{<block_content> <return>return <expr><name>x</name> <operator>+</operator> <literal type="number">42</literal></expr>;</return> </block_content>}</block></function></unit>
